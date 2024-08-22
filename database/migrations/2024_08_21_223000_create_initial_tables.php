@@ -69,7 +69,7 @@ return new class extends Migration {
             $table->timestamps();
         });
 
-        Schema::create('area', function (Blueprint $table) {
+        Schema::create('areas', function (Blueprint $table) {
             $table->id();
             $table->string('name', 64)->unique();
             $table->integer('building_id')->nullable();
@@ -99,7 +99,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name', 64)->unique();
             $table->mediumText('description')->nullable();
-            $table->integer('room_id');
+            $table->integer('location_id');
             $table->timestamps();
         });
 
@@ -123,5 +123,11 @@ return new class extends Migration {
         Schema::dropIfExists('images');
         Schema::dropIfExists('contacts');
         Schema::dropIfExists('properties');
+        Schema::dropIfExists('buildings');
+        Schema::dropIfExists('rooms');
+        Schema::dropIfExists('areas');
+        Schema::dropIfExists('locations');
+        Schema::dropIfExists('storages');
+        Schema::dropIfExists('storage_items');
     }
 };

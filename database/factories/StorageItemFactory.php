@@ -24,4 +24,11 @@ class StorageItemFactory extends Factory
             'storage_id' => null,
         ];
     }
+
+    public function withStorage(int $storageId)
+    {
+        return $this->state([
+            'storage_id' => $storageId,
+        ]);
+    }
 }

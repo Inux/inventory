@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\StorageItem;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,9 +16,6 @@ Route::middleware([
     })->name('dashboard');
 
     Route::get('/inventory', function () {
-        return view('inventory', [
-            'storageItems' => StorageItem::all(),
-            'test' => 'test',
-        ]);
+        return view('inventory');
     })->name('inventory');
 });

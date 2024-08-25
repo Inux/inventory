@@ -86,17 +86,17 @@ class PropertyForellenhofSeeder extends Seeder
         ]);
 
         $ksLinksItems = StorageItem::factory()
-            ->count(5)
+            ->count(50)
             ->withStorage($ksLinks)
             ->create();
 
         $ksMitteItems = StorageItem::factory()
-            ->count(5)
+            ->count(50)
             ->withStorage($ksMitte)
             ->create();
 
         $ksRechtsItems = StorageItem::factory()
-            ->count(5)
+            ->count(50)
             ->withStorage($ksRechts)
             ->create();
     }

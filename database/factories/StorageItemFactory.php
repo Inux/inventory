@@ -18,7 +18,7 @@ class StorageItemFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'description' => fake()->text(),
+            'description' => fake()->text(20),
             'expiration_date' => strval(fake()->numberBetween(2025, 2030)),
             'count' => fake()->numberBetween(1, 50),
             'storage_id' => null,
